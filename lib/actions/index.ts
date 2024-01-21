@@ -123,3 +123,35 @@ export async function YouTubeVideoLive(): Promise<string | null> {
       
     }
   }
+
+
+export async function QuranVerse(Chapter: string) {
+  try {
+    const url  = `https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/tam-janturstfoundat/${Chapter}.json`;
+    const response = await axios.get(url);
+    // console.log(response);
+    const output = response.data.chapter;
+    // console.log(output);
+
+    return output;
+
+  } catch (error: any) {
+    throw new Error(`Unable to fetch quran verse: ${error.message}`);
+    
+  }
+}
+
+
+export async function QuranVerseArabic(Chapter: string) {
+  try {
+    const url = `https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quransimple/${Chapter}.json`;
+    const response = await axios.get(url);
+    // console.log(response);
+    const output = response.data.chapter;
+    // console.log(output);
+    return output;
+  } catch (error: any) {
+    throw new Error(`Error while fetching quran arabic verse: ${error.message}`);
+    
+  }
+}

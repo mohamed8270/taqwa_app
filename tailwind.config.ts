@@ -15,6 +15,8 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ["Poppins"],
+        tamil: ["Noto Sans Tamil"],
+        arabic: ["Noto Naskh Arabic"],
       },
       colors: {
         Tblack: "#242424",
