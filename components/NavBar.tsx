@@ -16,7 +16,7 @@ const NavBar = () => {
             </Link>
             <ul className='hidden gap-12 lg:flex'>
                 {navlinks.map((link)=>(
-                <Link href={link.href} key={link.key} className='text-Tblack cursor-pointer items-center hover:text-Tgreen font-poppins text-[13px] font-semibold'>{link.label}</Link>
+                <Link href={link.href} key={link.key} className='text-Tblack cursor-pointer items-center hover:bg-Tblack hover:bg-opacity-5 p-[10px] rounded-lg font-poppins text-[12px] font-regular hover:font-semibold'>{link.label}</Link>
                 ))}
             </ul>
             <ButtonRepo type={`button`} click={() => router.push('/')} styles={`h-[40px] w-[85px] text-[12px] bg-Tgreen text-Twhite`} txt={`Sigin`}/>
